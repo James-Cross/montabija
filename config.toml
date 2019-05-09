@@ -1,0 +1,6 @@
+baseurl = "/"
+languageCode = "en-gb"
+title = "Gabija Montvydait&#279"
+disableKinds = ["RSS", "taxonomyTerm"]
+[blackfriday]
+   hrefTargetBlank = true

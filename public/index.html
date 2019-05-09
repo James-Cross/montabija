@@ -1,0 +1,117 @@
+<!doctype html>
+<html class="no-js" lang="en-GB" xmlns:fb="http://ogp.me/ns/fb#"><head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="Gabija Montvydaitė" />
+  <meta property="og:url" content="/" />
+  <meta property="og:description" content="Personal website and blog for Gabija Montvydaite" />
+  <meta property="og:type" content="website" />
+  <title>Gabija Montvydaitė</title>
+
+
+  
+  
+  
+  
+  <link rel="stylesheet" href="/sass/main.min.css">
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    $(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+    })
+</script>
+
+</head><body>
+<header class="header decor decor-bottom decor-rc-sunny" role="banner">
+  <nav>
+      <div class="logo">LOGO</div>
+      <div class="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+      </div>
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+      </ul>
+  </nav>
+  </header>
+
+
+<section class="sec1"></section>     
+
+<h1 class="page-title">Gabija Montvydait&#279</h1>
+
+<section class="content">
+  <h2>this is a heading</h2>
+  
+  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+
+<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+</p>
+</section>
+
+<section class="home_cards">
+    <div class="container">
+        <div class="card">
+            <img src="//unsplash.it/400/400" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">About</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="//unsplash.it/401/401" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">Blog</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="//unsplash.it/401/402" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">Contact</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact container">
+    <div class="contact_info">
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+    </div>
+    <div class="contact_form">
+        <p>here will be a contact form</p>
+    </div>
+</section>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+
+
+</body>
+</html>

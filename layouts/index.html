@@ -1,0 +1,64 @@
+{{ define "main" }}
+{{ partial "header.html" .Params.header }}
+
+
+<section class="sec1"></section>     
+
+<h1 class="page-title">Gabija Montvydait&#279</h1>
+
+<section class="content">
+  <h2>{{ .Params.section.heading}}</h2>
+  {{ $sectionBodyMarkdown := .Params.section.body | markdownify }}
+  {{ if not ( strings.Contains $sectionBodyMarkdown "<p>" ) }}<p>{{ $sectionBodyMarkdown }}</p>{{ else }}{{ $sectionBodyMarkdown }}{{ end }}</p>
+</section>
+
+<section class="home_cards">
+    <div class="container">
+        <div class="card">
+            <img src="//unsplash.it/400/400" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">About</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="//unsplash.it/401/401" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">Blog</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+        <div class="card">
+            <img src="//unsplash.it/401/402" alt="" class="card__img">
+            <div class="card__text">
+                <h3 class="card__title">Contact</h3>
+                <p class="card__body">And here is some text</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contact container">
+    <div class="contact_info">
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+        <p>here's contact info</p>
+    </div>
+    <div class="contact_form">
+        <p>here will be a contact form</p>
+    </div>
+</section>
+
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+{{ end }}

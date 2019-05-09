@@ -1,0 +1,21 @@
+backend:
+  name: git-gateway
+
+media_folder: "hugo/static/assets/uploads"
+public_folder: "assets/uploads"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    editor:
+      preview: false
+    files:
+      - file: "content/_index.md"
+        label: "Home" 
+        name: "home"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Section", name: "section", widget: "object", fields: [
+              {label: "Heading", name: "heading", widget: "string"},
+              {label: "Body", name: "body", widget: "markdown"}
+          ]}

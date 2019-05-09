@@ -1,0 +1,30 @@
+<head prefix="og: http://ogp.me/ns#">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="{{.Title}}" />
+  <meta property="og:url" content="{{ .Permalink }}" />
+  <meta property="og:description" content="Personal website and blog for Gabija Montvydaite" />
+  <meta property="og:type" content="website" />
+  <title>{{.Title}}</title>
+
+
+  <!-- stylesheet -->
+  {{ $styleSass := resources.Get "sass/main.scss" }}
+  {{ $styleCSS := $styleSass | resources.ToCSS }}
+  {{ $style := resources.Get "sass/main.scss" | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $style.Permalink }}">
+  {{if .IsHome }}<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>{{end}}
+
+  <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+  <script type="text/javascript">
+    $(window).on('scroll', function() {
+        if($(window).scrollTop()) {
+            $('nav').addClass('black');
+        }
+        else {
+            $('nav').removeClass('black');
+        }
+    })
+</script>
+
+</head>
