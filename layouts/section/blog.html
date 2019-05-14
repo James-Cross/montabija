@@ -1,0 +1,31 @@
+{{ define "main" }}
+{{ partial "header.html" .Params.header }}
+
+{{ with .Site.GetPage "section" "blog-posts" }}{{ if eq .Params.showonhome true }}
+<section class="blog-container">
+  <div class="container">
+    <div class="">
+      <h2 class="">
+        {{ with .Site.GetPage "section" "blog-posts" }}{{ .Params.heading }}{{ end }}
+      </h2>
+    </div>
+    <div class="summary-card">
+      {{ range first 2 (where .Site.RegularPages.ByDate.Reverse "Section" "blog-posts") }}
+      <div class="">
+        <h3 class="">{{ .Params.summaryyy.heading }}</h3>
+        <div class="">
+          <img alt="" src="{{ .Params.summaryyy.image }}">
+        </div>
+        <a class="" href="{{ .Permalink }}">{{ .Params.summaryyy.text }}</a>
+      </div>
+      {{ end }}
+    </div>
+    <div class="">
+      {{ with .Site.GetPage "section" "blog-posts" }}<a class="button" href="{{ .Params.button.url }}">{{ .Params.button.text }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}{{ end }}
+
+
+{{ end }}

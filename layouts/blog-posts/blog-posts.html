@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{ partial "header.html" .Params.header }}
+
+<div id="main">
+
+  {{ with .Site.GetPage "Section" "blog-posts" }}
+  {{ if .Params.intro }}
+  <div class="blog-container">
+    <div class="container">
+      <div class="">
+        {{ .Params.intro | markdownify }}
+      </div>
+    </div>
+  </div>
+  {{ end }}
+  {{ end }}
+
+  <section class="">
+    <div class="container">
+      <div class="">
+        <h2 class="">
+          {{ with .Site.GetPage "section" "blog-posts" }}{{ .Params.heading }}{{ end }}
+        </h2>
+      </div>
+      <div class="">
+  {{ range (where .Site.RegularPages.ByDate.Reverse "Section" "blog-posts") }}
+  <div class="card-story card-stroy-witharrow">
+    <h3 class="card-story-title">{{ .Params.summaryyy.heading }}</h3>
+    <div class="summary-card">
+      <img alt="" src="{{ .Params.summaryyy.image }}">
+    </div>
+    <a class="" href="{{ .Permalink }}">{{ .Params.summaryyy.text }}</a>
+  </div>
+  {{ end }}
+      </div>
+      <div class="">
+        {{ with .Site.GetPage "section" "blog-posts" }}<a class="button" href="{{ .Params.button.url }}">{{ .Params.button.text }}</a>{{ end }}
+      </div>
+    </div>
+  </section>
+
+</div>
+
+{{ $footer := .Site.GetPage "_footer.md" }}
+{{ partial "footer.html" (dict "footer" $footer) }}
+{{ end }}

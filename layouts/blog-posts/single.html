@@ -1,0 +1,32 @@
+{{ define "main" }}
+{{ partial "header.html" .Params.header }}
+
+<div id="main">
+  <article class="blog-container">
+    <div class="container">
+      <div class="">
+        {{ if .Params.content.image }}
+        <div class="casestudy-header-media aspect-bg aspect-bg-4by3">
+          <div class="summary-card">
+            <img alt="" src="{{ .Params.content.image }}">
+          </div>
+        </div>
+        {{ end }}
+        <div class="casestudy-header-body">
+          {{ if .Params.content.name }}<h4 class="h2 mb-n"></h4><p>{{ .Params.content.name }}</p>{{ end }}
+          {{ if .Params.content.prepTime }}<h4 class="h2 mb-n">Preparation Time:</h4><p>{{ .Params.content.prepTime }}</p>{{ end }}
+          {{ if .Params.content.ingredients }}<h4>Ingredients</h4><p>{{ .Params.content.ingredients }}</p>{{ end }}
+        </div>
+      </div>
+      <div class="casestudy-body">
+        <div class="content">
+          {{ $contentBodyMarkdown := .Params.content.body | markdownify }}
+          {{ if not ( strings.Contains $contentBodyMarkdown "<p>" ) }}<p>{{ $contentBodyMarkdown }}</p>{{ else }}{{ $contentBodyMarkdown }}{{ end }}
+        </div>
+      </div>
+    </div>
+  </article>
+
+</div>
+
+{{ end }}
