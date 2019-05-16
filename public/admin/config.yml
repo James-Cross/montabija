@@ -20,29 +20,29 @@ collections:
               {label: "Body", name: "body", widget: "markdown"}
           ]}
   - name: "blog-posts"
-      label: "Blog Post"
-      editor:
-        preview: false
-      folder: "hugo/content/blog-posts"
-      create: true
-      filter: {field: "post", value: "yes"}
-      fields:
-        - {label: "Post", name: "Post", widget: "hidden", default: "yes"}
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Publish Date", name: "date", widget: "datetime"}
-        - {label: "Header", name: "header", widget: "object", fields: [
-            {label: "Background (optional)", name: "background", widget: "image", required: false},
-            {label: "Header Text (optional)", name: "hero", widget: "markdown", required: false}
-          ]}
-        - {label: "Summary (Card on Home and Stories)", name: "summaryyy", widget: "object", fields: [
-            {label: "Image (Aspect 5by2 - 540px by 216px)", name: "image", widget: "image"},
-            {label: "Heading", name: "heading", widget: "string"},
-            {label: "Text", name: "text", widget: "string"}
-          ]}
-        - {label: "Content", name: "content", widget: "object", fields: [
-            {label: "Image (Aspect 4by3 - 640px by 480px)", name: "image", widget: "image"},
-            {label: "Post Name", name: "name", widget: "string"},
-            {label: "Sub-heading", name: "prepTime", widget: "string"},
-            {label: "Third Heading", name: "ingredients", widget: "markdown"},
-            {label: "Body", name: "body", widget: "markdown"}
-          ]}
+    label: "Blog Post"
+    editor:
+      preview: false
+    folder: "/content/blog-posts"
+    create: true
+    filter: {field: "post", value: "yes"}
+    fields:
+      - {label: "Post", name: "Post", widget: "hidden", default: "yes"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Header", name: "header", widget: "object", fields: [
+          {label: "Background (optional)", name: "background", widget: "image", required: false},
+          {label: "Header Text (optional)", name: "hero", widget: "markdown", required: false}
+        ]}
+      - {label: "Summary (Card on Home and Stories)", name: "summaryyy", widget: "object", fields: [
+          {label: "Image (Aspect 5by2 - 540px by 216px)", name: "image", widget: "image"},
+          {label: "Heading", name: "heading", widget: "string"},
+          {label: "Text", name: "text", widget: "string"}
+        ]}
+      - {label: "Content", name: "content", widget: "object", fields: [
+          {label: "Image (Aspect 4by3 - 640px by 480px)", name: "image", widget: "image"},
+          {label: "Post Name", name: "name", widget: "string"},
+          {label: "Sub-heading", name: "prepTime", widget: "string"},
+          {label: "Third Heading", name: "ingredients", widget: "markdown"},
+          {label: "Body", name: "body", widget: "markdown"}
+        ]}

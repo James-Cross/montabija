@@ -14,13 +14,13 @@
 
 <section class="home_cards">
     <div class="container">
-        <div class="card">
+        <a href="/about/" class="card">
           <img src="//unsplash.it/400/400" alt="" class="card__img">
           <div class="card__text">
               <h3 class="card__title">About</h3>
               <p class="card__body">And here is some text</p>
           </div>
-        </div>
+        </a>
         <a href="/blog-posts/" class="card">
           <img src="//unsplash.it/401/401" alt="" class="card__img">
           <div class="card__text">
@@ -28,27 +28,32 @@
               <p class="card__body">And here is some text</p>
           </div>
         </a>
-        <div class="card">
+        <a href="/about/" class="card">
           <img src="//unsplash.it/401/402" alt="" class="card__img">
           <div class="card__text">
-              <h3 class="card__title">Contact</h3>
+              <h3 class="card__title">Something else</h3>
               <p class="card__body">And here is some text</p>
           </div>
-        </div>
+        </a>
     </div>
 </section>
+<h1>Contact me</h1>
+<p>Have a question about something you've seen? Why don't you ask?</p>
 
-<section class="contact container">
-    <div class="contact_info">
-        <p>here's contact info</p>
-        <p>here's contact info</p>
-        <p>here's contact info</p>
-        <p>here's contact info</p>
+<div class="container form-container">
+      <form action="mailto:ggabija101@gmail.com" class="contact-form">
+        <div class="form-item">
+          <input type="text" class="form-input" placeholder="first name" aria-label="first name">
+        </div>
+        <div class="form-item">
+          <input type="email" class="form-input" placeholder="email address" aria-label="email address">
+        </div>
+        <div class="form-item">
+          <textarea name="comment" class="form-input" placeholder="message" aria-label="message"></textarea>
+        </div>
+        <button class="form-button" type="submit">Submit</button>
+      </form>
     </div>
-    <div class="contact_form">
-        <p>here will be a contact form</p>
-    </div>
-</section>
 
 <script>
   if (window.netlifyIdentity) {
@@ -61,4 +66,8 @@
     });
   }
 </script>
+{{ partial "footer.html" .Params.footer }}
+
 {{ end }}
+
+
