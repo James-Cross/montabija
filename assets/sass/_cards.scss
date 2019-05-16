@@ -36,10 +36,21 @@
 }
 }
 
+@media screen and (max-width: $break-large) {
+  .card {
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .card {
+    width: 350px;
+  }
+}
+
 
 .card__img {
   max-width: 100%;
-  display: block;
   transition: opacity ease-out 250ms;
 }
 
@@ -71,8 +82,15 @@
 
 .home_cards {
   background-color: $clr-yellow;
-  padding: 150px;
+  padding: 150px 0;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  @media screen and (max-width: $break-large) {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .summary-card {
