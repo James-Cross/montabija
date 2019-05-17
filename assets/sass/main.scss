@@ -18,8 +18,8 @@ section.sec1 {
   background-size: cover;
   background-position: center;
   position: relative;
-  z-index: -1;
   background-attachment: fixed;
+  z-index: -1;
 }
 
 *, *::before, *::after { box-sizing: border-box }

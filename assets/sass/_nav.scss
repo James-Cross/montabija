@@ -42,6 +42,10 @@ nav.black .logo {
   color: #fff;
 }
 
+nav.black .burger div {
+  background-color: #fff;
+}
+
 nav ul {
   list-style: none;
   float: right;
@@ -79,20 +83,21 @@ nav ul li a:focus {
   .nav-links {
     position: absolute;
     right: 0px;
-    height: 92vh;
-    top: 8vh;
+    height: 100vh;
+    top: 11vh;
     background-color: rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50%;
+    width: 100%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    color: white;
   }
 
-  .nav-links li {
-    opacity: 0;
+  nav ul li a {
+    color: white;
   }
 
   .burger {
