@@ -62,7 +62,11 @@ form {
   padding: 1.25em 2.25em;
 }
 
-#contact-container {
+.contact-container {
   display: flex;
   justify-content: center;
+}
+
+#contact-scroll {
+  display: flex;
 }
