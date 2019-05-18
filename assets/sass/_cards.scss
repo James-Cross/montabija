@@ -37,6 +37,21 @@
 }
 
 @media screen and (max-width: $break-large) {
+  .card::before {
+    transform: scale(1.05, 1);
+}
+  .card::after {
+    transform: scale(1, 1.05);
+}
+  .card .card__text {
+    opacity: 1;
+}
+  .card__img {
+    opacity: .4;
+}
+}
+
+@media screen and (max-width: $break-large) {
   .card {
     width: 500px;
   }
